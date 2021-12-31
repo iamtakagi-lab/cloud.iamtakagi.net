@@ -2,6 +2,7 @@ server {
         server_name blog.iamtakagi.net;
         root /var/www/html;
         index index.php;
+        client_max_body_size 64M;
 
         location = /favicon.ico {
                 log_not_found off;
