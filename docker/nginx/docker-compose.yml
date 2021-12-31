@@ -7,11 +7,11 @@ services:
         - 80:80
         - 443:443
       volumes:
-        - ../../public:/usr/share/nginx/html:ro
+        - ../../public:/usr/share/nginx/html
         - ./sites-enabled:/etc/nginx/sites-enabled
         - ./nginx.conf:/etc/nginx/nginx.conf
-        - ../mastodon/public/system:/var/www/:ro
-        - ../wordpress/public:/var/www/html:ro
+        - ../mastodon/public/system:/var/www
+        - ../wordpress/public:/var/www/html
       environment:
         TZ: Asia/Tokyo
       restart: unless-stopped
