@@ -1,0 +1,6 @@
+docker/mastodon/postgres/**/*
+docker/mastodon/public/system/**/*
+docker/mastodon/redis/**/*
+docker/wordpress/mysql/**/*
+docker/wordpress/public/**/*
+!.gitkeep

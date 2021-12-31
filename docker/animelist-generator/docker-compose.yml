@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: ag_backend
+    image: iamtakagi/animelist-generator_python:latest
+    environment:
+      TZ: Asia/Tokyo
+      HOST: 0.0.0.0
+      PORT: 3100
+    restart: unless-stopped
+    networks:
+      - external_network
+      - internal_network
+  frontend:
+    container_name: ag_frontend
+    image: iamtakagi/animelist-generator_next:latest
+    environment:
+      TZ: Asia/Tokyo
+      HOST: 0.0.0.0
+      PORT: 4100
+    restart: unless-stopped
+    depends_on:
+      - backend
+    networks:
+      - external_network
+      - internal_network
+
+networks:
+  external_network:
+    external: true
+  internal_network:
+    internal: true
