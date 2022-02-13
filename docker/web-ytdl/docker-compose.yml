@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: web-ytdl
+    build:
+      context: .
+    environment:
+      - TZ=Asia/Tokyo
+      - PORT=4200
+    restart: unless-stopped
+    networks:
+      - external_network
+
+networks:
+  external_network:
+    external: true
