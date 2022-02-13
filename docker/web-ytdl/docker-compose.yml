@@ -3,8 +3,7 @@ version: '3.8'
 services:
   app:
     container_name: web-ytdl
-    build:
-      context: .
+    image: ghcr.io/iamtakagi/web-ytdl:latest
     environment:
       - TZ=Asia/Tokyo
       - PORT=4200
