@@ -8,3 +8,9 @@ services:
       - TZ=Asia/Tokyo
       - PORT=4300
     restart: unless-stopped
+    networks:
+      - external_network
+
+networks:
+  external_network:
+    external: true
