@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app:
+    container_name: youtube-web-player
+    image: ghcr.io/iamtakagi/youtube-web-player:latest
+    environment:
+      - TZ=Asia/Tokyo
+      - PORT=4300
+    restart: unless-stopped
