@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: renchon
+    image: ghcr.io/iamtakagi/renchon:latest
+    environment:
+        HOST: 0.0.0.0
+        PORT: 4800
+        TZ: Asia/Tokyo
+        SCREEN_NAME: nyanpassnanon
+        TWITTER_CK: xxx
+        TWITTER_CS: xxx
+        TWITTER_AT: xxx
+        TWITTER_ATS: xxx
+        DISCORD_WEBHOOK_URL: https://discord.com/api/webhooks/xxx/xx
+    restart: unless-stopped
+    networks:
+      - external_network
+
+networks:
+  external_network:
+    external: true
