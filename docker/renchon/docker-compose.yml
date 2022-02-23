@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 
 services:
   app:
@@ -13,7 +13,7 @@ services:
         TWITTER_CS: xxx
         TWITTER_AT: xxx
         TWITTER_ATS: xxx
-        DISCORD_WEBHOOK_URL: https://discord.com/api/webhooks/xxx/xx
+        DISCORD_WEBHOOK_URL: https://discord.com/api/webhooks/xxx/xxx
     restart: unless-stopped
     networks:
       - external_network
