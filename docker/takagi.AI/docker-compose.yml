@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  app:
+    image: ghcr.io/iamtakagi/takagi.ai
+    volumes:
+      - ./data:/app/data
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8282
+      TZ: Asia/Tokyo
+      USERS: iam_takagi
+      TWITTER_CK: xxx
+      TWITTER_CS: xxx
+      TWITTER_AT: xxx
+      TWITTER_ATS: xxx
+    networks:
+      - external_network
+    restart: unless-stopped
+
+networks:
+  external_network:
+    external: true
