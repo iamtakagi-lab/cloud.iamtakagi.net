@@ -1,4 +1,4 @@
 # cloud.iamtakagi.net
 
-## LICENCE
+## LICENSE
 MIT.
