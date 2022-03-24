@@ -1,6 +1,5 @@
-version: '3'
+version: "3"
 services:
-
   postgres:
     container_name: twichat_postgres
     image: postgres
@@ -44,9 +43,7 @@ services:
       - BACKEND_HOSTNAME=twichat.app
       - WEBPAGE_BASE_URL=https://twichat.app
     command: >
-      /bin/bash -c "
-      python manage.py migrate &&
-      gunicorn -c /app/gunicorn.py twichat.wsgi"
+      /bin/bash -c " python manage.py migrate && gunicorn -c /app/gunicorn.py twichat.wsgi"
     networks:
       - internal_network
       - external_network
@@ -54,7 +51,7 @@ services:
       - postgres
 
 networks:
-    external_network:
-      external: true
-    internal_network:
-      internal: true
+  external_network:
+    external: true
+  internal_network:
+    internal: true
