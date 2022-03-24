@@ -1,4 +1,4 @@
 FROM nginx:1.19
 
-ADD sites-enabled /etc/nginx/sites-enabled/
-ADD nginx.conf /etc/nginx/
+COPY sites-enabled/ /etc/nginx/sites-enabled/
+COPY nginx.conf /etc/nginx/
